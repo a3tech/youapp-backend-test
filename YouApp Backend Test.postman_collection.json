@@ -1,0 +1,302 @@
+{
+	"info": {
+		"_postman_id": "4a73058a-7ab6-4ea6-acbb-3c8763de3749",
+		"name": "YouApp Backend Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12402343"
+	},
+	"item": [
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Profiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTUzOTgwNzRhMTFkZDYxYzQ5MDY2ODAiLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiaWF0IjoxNzY3MDg2MDkyLCJleHAiOjE3NjcxNzI0OTJ9.ZWa4xy0s4N8kz3-btQmaokcZE3cxSM6bVaiznQgG8YM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTUzOTgwNzRhMTFkZDYxYzQ5MDY2ODAiLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiaWF0IjoxNzY3MDg2MDkyLCJleHAiOjE3NjcxNzI0OTJ9.ZWa4xy0s4N8kz3-btQmaokcZE3cxSM6bVaiznQgG8YM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "displayName",
+									"value": "John Doe2",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "birthday",
+									"value": "1995-08-21",
+									"type": "text"
+								},
+								{
+									"key": "height",
+									"value": "170",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "65",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/a3/Pictures/307583925_403644645259267_2895548071337849560_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profiles",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTUzOWQ1NGQ3MTc3MGVkYTc0ZTYzMTQiLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiaWF0IjoxNzY3MDg3NDQ4LCJleHAiOjE3NjcxNzM4NDh9.5CQgMw2oxo7Z_aqJn-Z4SNEUDrPg8EKftKeVnZm2cZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "displayName",
+									"value": "John Weak",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/a3/Pictures/456718821_1010759131096116_8315160891128804182_n.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"user2@gmail.com\",\n  \"username\": \"john_doe2\",\n  \"password\": \"strongpassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identifier\": \"user@gmail.com\",\n  \"password\": \"strongpassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Send Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTUzOWQ1NGQ3MTc3MGVkYTc0ZTYzMTQiLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiaWF0IjoxNzY3MDg3NDQ4LCJleHAiOjE3NjcxNzM4NDh9.5CQgMw2oxo7Z_aqJn-Z4SNEUDrPg8EKftKeVnZm2cZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"receiverId\": \"69539fd19a7ed8ee9cfa0aa2\",\n  \"content\": \"Hello there 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/chat/send-message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"send-message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "View Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2OTUzOWQ1NGQ3MTc3MGVkYTc0ZTYzMTQiLCJ1c2VybmFtZSI6ImpvaG5fZG9lIiwiaWF0IjoxNzY3MDg3NDQ4LCJleHAiOjE3NjcxNzM4NDh9.5CQgMw2oxo7Z_aqJn-Z4SNEUDrPg8EKftKeVnZm2cZA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/chat/view-messages?userId=69539fd19a7ed8ee9cfa0aa2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"chat",
+								"view-messages"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "69539fd19a7ed8ee9cfa0aa2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
